@@ -8,12 +8,8 @@ import { UsersModule } from './users/users.module';
 import { UsersService } from './users/users.service';
 
 @Module({
-  imports: [
-    TypeOrmModule.forRoot(config),
-    TypeOrmModule.forFeature([User]),
-    UsersModule,
-  ],
+  imports: [TypeOrmModule.forRoot(config), TypeOrmModule.forFeature([User])],
   controllers: [AppController],
-  providers: [AppService, UsersService],
+  providers: [AppService],
 })
 export class AppModule {}
